@@ -51,7 +51,7 @@ if ($has_update) {
     There are some updates in the <b>' . getenv('SERVER_NAME') . '</b> server.<br />
     Please update it ASAP.<br /><br />
     <b><u>Updates</u></b> <br /><br /><i>'.
-    $output
+    nl2br($output)
     . ' </i><br /><br />This mail has been send by the Updater Checker at ' . date("Y-m-d H:i:s") . ' UTC';
     $mail->AltBody = 'There are some updates in the ' . getenv('SERVER_NAME') . ' server';
     if(!$mail->send()) {

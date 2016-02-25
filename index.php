@@ -12,6 +12,7 @@ date_default_timezone_set('UTC');
 $no_update = [
     '0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.', // English
     '0 actualizados, 0 nuevos se instalarán, 0 para eliminar y 0 no actualizados.', // Spanish
+    '0 actualizados, 0 se instalarán, 0 para eliminar y 0 no actualizados.' // Spanish Debian GNU/Linux 7.6
 ];
 
 // Execute the apt-get update and the apt-get upgrade (simulation)

@@ -55,12 +55,11 @@ if ($has_update) {
     . ' </i><br /><br />This mail has been send by the Updater Checker at ' . date("Y-m-d H:i:s") . ' UTC';
     $mail->AltBody = 'There are some updates in the ' . getenv('SERVER_NAME') . ' server';
     if(!$mail->send()) {
-        echo 'Message could not be sent.';
-        echo 'Mailer Error: ' . $mail->ErrorInfo;
-        echo date("Y-m-d H:i:s");
+        echo 'Message could not be sent at ' . date("Y-m-d H:i:s") . PHP_EOL;
+        echo 'Mailer Error: ' . $mail->ErrorInfo . PHP_EOL;
     } else {
-        echo 'Message has been sent' . date("Y-m-d H:i:s");
+        echo 'Message has been sent at ' . date("Y-m-d H:i:s") . PHP_EOL;
     }
 } else {
-    echo 'No Update.' . date("Y-m-d H:i:s");
+    echo 'No Update at ' . date("Y-m-d H:i:s") . PHP_EOL;
 }
